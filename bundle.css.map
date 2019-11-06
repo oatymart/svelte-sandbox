@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../src/App.svelte",
+    "../src/components/TestRunner.svelte",
+    "../src/components/ItemRunner.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n\timport TestRunner from './components/TestRunner.svelte';\n\tlet name = 'Martin';\n\tlet age = 37;\n\n\t$: uppercaseName = name.toUpperCase(); // reactive / computed value\n\n\tfunction alertMe() {\n\t\talert('hey');\n\t}\n\n</script>\n\n<style lang=\"scss\">@import url(/pure-min.css);\n:root {\n  --the-color-purple: purple; }\n\ndiv {\n  background-color: black; }\n\n:root {\n  --bgColor: teal; }\n\ndiv {\n  --bgColor: green;\n  background-color: var(--bgColor); }\n\nh1 {\n  --the-color-purple: indigo; }\n\n.app {\n  padding: 0.5rem; }\n  .app h1 {\n    color: var(--the-color-purple);\n    color: purple; }\n  .app .pure-button-group {\n    margin-bottom: 1rem; }\n</style>\n\n<div class=\"app\">\n\t<h1>Hello {uppercaseName}!</h1>\n\t<div class=\"pure-button-group\" role=\"group\" aria-label=\"...\">\n\t\t<button class=\"pure-button\" on:click={alertMe}>A Pure Button</button>\n\t\t<button class=\"pure-button\" disabled>A Disabled Button</button>\n\t\t<button class=\"pure-button pure-button-active\">An Active Button</button>\n\t\t<button class=\"pure-button pure-button-primary\">A Primary Button {age}</button>\n\t</div>\n\t<label for=\"nameField\">Name:</label><input id=\"nameField\" type=\"text\" bind:value={name} />\n\t<TestRunner testId={42}></TestRunner>\n</div>\n",
+    "<script>\n\timport ItemRunner from './ItemRunner.svelte';\n    export let testId;\n</script>\n\n<style lang=\"scss\">.test-runner {\n  padding: 2rem; }\n  .test-runner h2 {\n    letter-spacing: 0.1em;\n    color: limegreen; }\n</style>\n\n<div class=\"test-runner\">\n  <h2>Test id is {testId}</h2>\n  <ItemRunner></ItemRunner>\n</div>\n",
+    "<script>\n    export let itemId = Math.floor(100 * Math.random());\n</script>\n\n<style lang=\"scss\">.item-runner {\n  padding: 2rem; }\n  .item-runner h3 {\n    letter-spacing: 0.2em;\n    color: yellow; }\n</style>\n\n<div class=\"item-runner\">\n    <h3>Item id is {itemId}</h3>\n    <img class=\"pure-img\" src=\"https://via.placeholder.com/250x150\"/>\n</div>"
+  ],
+  "names": [],
+  "mappings": "AAamB,QAAQ,IAAI,aAAa,CAAC,CAAC,AAC9C,KAAK,AAAC,CAAC,AACL,kBAAkB,CAAE,MAAM,AAAE,CAAC,AAE/B,GAAG,cAAC,CAAC,AACH,gBAAgB,CAAE,KAAK,AAAE,CAAC,AAE5B,KAAK,AAAC,CAAC,AACL,SAAS,CAAE,IAAI,AAAE,CAAC,AAEpB,GAAG,cAAC,CAAC,AACH,SAAS,CAAE,KAAK,CAChB,gBAAgB,CAAE,IAAI,SAAS,CAAC,AAAE,CAAC,AAErC,EAAE,cAAC,CAAC,AACF,kBAAkB,CAAE,MAAM,AAAE,CAAC,AAE/B,IAAI,cAAC,CAAC,AACJ,OAAO,CAAE,MAAM,AAAE,CAAC,AAClB,kBAAI,CAAC,EAAE,cAAC,CAAC,AACP,KAAK,CAAE,IAAI,kBAAkB,CAAC,CAC9B,KAAK,CAAE,MAAM,AAAE,CAAC,AAClB,kBAAI,CAAC,kBAAkB,cAAC,CAAC,AACvB,aAAa,CAAE,IAAI,AAAE,CAAC;AC/BP,YAAY,eAAC,CAAC,AAC/B,OAAO,CAAE,IAAI,AAAE,CAAC,AAChB,2BAAY,CAAC,EAAE,eAAC,CAAC,AACf,cAAc,CAAE,KAAK,CACrB,KAAK,CAAE,SAAS,AAAE,CAAC;ACLJ,YAAY,cAAC,CAAC,AAC/B,OAAO,CAAE,IAAI,AAAE,CAAC,AAChB,0BAAY,CAAC,EAAE,cAAC,CAAC,AACf,cAAc,CAAE,KAAK,CACrB,KAAK,CAAE,MAAM,AAAE,CAAC"
+}

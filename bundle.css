@@ -1,0 +1,5 @@
+@import url(/pure-min.css);:root{--the-color-purple:purple}div.svelte-8xprib{background-color:black}:root{--bgColor:teal}div.svelte-8xprib{--bgColor:green;background-color:var(--bgColor)}h1.svelte-8xprib{--the-color-purple:indigo}.app.svelte-8xprib{padding:0.5rem}.app.svelte-8xprib h1.svelte-8xprib{color:var(--the-color-purple);color:purple}.app.svelte-8xprib .pure-button-group.svelte-8xprib{margin-bottom:1rem}
+.test-runner.svelte-1pyz62z{padding:2rem}.test-runner.svelte-1pyz62z h2.svelte-1pyz62z{letter-spacing:0.1em;color:limegreen}
+.item-runner.svelte-zjvpbj{padding:2rem}.item-runner.svelte-zjvpbj h3.svelte-zjvpbj{letter-spacing:0.2em;color:yellow}
+
+/*# sourceMappingURL=bundle.css.map */
