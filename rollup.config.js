@@ -4,6 +4,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
+import copy from 'rollup-plugin-copy';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -25,9 +26,17 @@ export default {
 				css.write('public/bundle.css');
             },
             preprocess: {
-                style: sass({}, { name: 'scss' })
+                style: sass({}, {
+                    name: 'scss',
+                    includePaths: ['src', 'node_modules']
+                })
             }
-		}),
+        }),
+        copy({
+            targets: [
+              { src: 'node_modules/purecss/build/pure-min.css', dest: 'public' }
+            ]
+        }),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
