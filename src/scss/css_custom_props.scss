@@ -1,0 +1,11 @@
+:root {
+    --bgColor: teal;
+}
+
+div {
+    --bgColor: green;
+    background-color: var(--bgColor);
+}
+h1 {
+    --the-color-purple: indigo;
+}

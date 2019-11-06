@@ -1,0 +1,12 @@
+$bgColor: black;
+
+$bgColor: red !default;
+
+//$theColorPurple: indigo; // will override !default
+
+div {
+    background-color: $bgColor;
+}
+h1 {
+    $theColorPurple: violet; // won't override !default
+}
